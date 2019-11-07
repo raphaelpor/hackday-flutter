@@ -11,10 +11,12 @@ class StoryProgressIndicatorState extends State<StoryProgressIndicator> {
 
   Widget build(BuildContext context) {
     return Expanded(
-        child: Padding(
-            padding: EdgeInsets.only(left: 2, right: 2),
-            child: LinearProgressIndicator(
-              backgroundColor: Colors.blue,
-            )));
+      child: Padding(
+        padding: EdgeInsets.only(left: 2, right: 2),
+        child: LinearProgressIndicator(
+          backgroundColor: Colors.blue,
+        ),
+      ),
+    );
   }
 }
