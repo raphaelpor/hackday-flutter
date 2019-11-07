@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'MyApp.dart';
+import 'Stories.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(Stories());

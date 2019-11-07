@@ -1,7 +1,29 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
-class Stories extends StatelessWidget {
-  // This widget is the root of your application.
+import 'components/renderStories.dart';
+import 'helpers/fetchPost.dart';
+import 'helpers/BodyData.dart';
+
+class Stories extends StatefulWidget {
+  Stories({Key key}) : super(key: key);
+
+  @override
+  _StoriesState createState() => _StoriesState();
+}
+
+class _StoriesState extends State<Stories> {
+  Future<BodyData> post;
+
+  // Stories({Key key, this.post}) : super(key: key);
+
+  @override
+  void initState() {
+    super.initState();
+    post = fetchPost();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,14 +36,10 @@ class Stories extends StatelessWidget {
           title: Text('Stories'),
         ),
         body: Center(
-          child: Text(
-            "Teste",
-            style: TextStyle(
-              fontSize: 42.0,
-              color: Color.fromRGBO(17, 17, 17, 1.0),
-              fontWeight: FontWeight.bold,
-            ),
-          ),,
+          child: FutureBuilder<BodyData>(
+            future: post,
+            builder: renderStories,
+          ),
         ),
       ),
     );
