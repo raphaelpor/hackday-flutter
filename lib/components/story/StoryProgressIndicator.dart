@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 
 class StoryProgressIndicator extends StatefulWidget {
   createState() {
@@ -11,11 +12,14 @@ class StoryProgressIndicatorState extends State<StoryProgressIndicator> {
 
   Widget build(BuildContext context) {
     return Expanded(
-      child: Padding(
-        padding: EdgeInsets.only(left: 2, right: 2),
-        child: LinearProgressIndicator(
-          backgroundColor: Colors.blue,
-        ),
+      child: LinearPercentIndicator(
+        animation: isActive,
+        animationDuration: 4000,
+        lineHeight: 3,
+        backgroundColor: Colors.grey,
+        percent: 1,
+        progressColor: Colors.white,
+        // valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
       ),
     );
   }
