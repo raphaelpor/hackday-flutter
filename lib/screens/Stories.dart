@@ -30,9 +30,6 @@ class _StoriesState extends State<Stories> {
         primarySwatch: Colors.blueGrey,
       ),
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('Stories'),
-        ),
         body: Center(
           child: FutureBuilder<BodyData>(
             future: post,
