@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hackday_stories/MyApp.dart';
+// import 'Stories.dart';
 
-import 'Stories.dart';
-
-void main() => runApp(Stories());
+void main() => runApp(MyApp());

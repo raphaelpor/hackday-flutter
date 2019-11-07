@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget Button() {
+Widget Button(BuildContext context) {
   return MaterialButton(
     child: Text(
       'Open Stories',
@@ -8,7 +8,7 @@ Widget Button() {
         fontSize: 20,
       ),
     ),
-    onPressed: () => print('pressed!'),
+    onPressed: () => Navigator.pushNamed(context, '/stories'),
     color: Colors.blueAccent,
     textColor: Colors.white,
     height: 50,
