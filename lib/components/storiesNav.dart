@@ -17,6 +17,12 @@ Widget storiesNav() {
         onTap: () {
           print('navegar');
         },
+        onVerticalDragStart: (_) {
+          print('onVerticalDragStart');
+        },
+        onVerticalDragEnd: (_) {
+          print('onVerticalDragEnd');
+        },
         child: Container(
           height: 50,
           color: Colors.transparent,
