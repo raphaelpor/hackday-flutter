@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hackday_stories/components/story/Story.dart';
 
 import 'storiesNav.dart';
 
@@ -10,7 +11,7 @@ Widget renderStories(context, snapshot) {
     print(data.stories);
 
     return Container(
-      child: storiesNav(),
+      child: Story(),
       color: Colors.black,
     );
   }
