@@ -8,8 +8,8 @@ Widget storiesNav() {
       Expanded(
         child: Row(
           children: <Widget>[
-            gestureDetector(() => { print('tap 1') }),
-            gestureDetector(() => { print('tap 2') }),
+            gestureDetector(() => print('tap 1')),
+            gestureDetector(() => print('tap 2')),
           ],
         ),
       ),
