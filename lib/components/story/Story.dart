@@ -9,7 +9,6 @@ class Story extends StatelessWidget {
       child: Align(
         alignment: Alignment.topCenter,
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             StoryProgressIndicator(),
             StoryProgressIndicator(),
