@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hackday_stories/Stories.dart';
 import 'components/Button.dart';
 
 class MyApp extends StatelessWidget {
@@ -10,15 +11,21 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
       ),
+      onGenerateRoute: (RouteSettings settings) {
+        return MaterialPageRoute(
+          builder: (context) {
+            return Stories();
+          },
+        );
+      },
       home: Scaffold(
         appBar: AppBar(
           title: Text('Hackday'),
         ),
         body: Center(
-          child: button(),
+          child: Button(),
         ),
       ),
     );
   }
 }
-
