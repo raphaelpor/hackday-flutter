@@ -9,7 +9,10 @@ Widget renderStories(context, snapshot) {
     print(title);
     print(data.stories);
 
-    return storiesNav();
+    return Container(
+      child: storiesNav(),
+      color: Colors.black,
+    );
   }
 
   // By default, show a loading spinner.
