@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './navComponents/gestureDetector.dart';
+import './navComponents/openContent.dart';
 
 Widget storiesNav() {
   return Column(
@@ -13,22 +14,7 @@ Widget storiesNav() {
           ],
         ),
       ),
-      GestureDetector(
-        onTap: () {
-          print('navegar');
-        },
-        onVerticalDragStart: (_) {
-          print('onVerticalDragStart');
-        },
-        onVerticalDragEnd: (_) {
-          print('onVerticalDragEnd');
-        },
-        child: Container(
-          height: 50,
-          color: Colors.transparent,
-        ),
-        // padding: EdgeInsets.all(0.0),
-      ),
+      openContent(),
     ],
   );
 }
