@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hackday_stories/Stories.dart';
 import 'package:hackday_stories/screens/Home.dart';
 
 import './routes/Routes.dart';
-import 'components/Button.dart';
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.

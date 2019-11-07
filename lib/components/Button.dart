@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget Button(BuildContext context) {
+Widget button(BuildContext context) {
   return MaterialButton(
     child: Text(
       'Open Stories',

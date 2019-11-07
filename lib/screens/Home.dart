@@ -9,7 +9,7 @@ class Home extends StatelessWidget {
         title: Text('Hackday'),
       ),
       body: Center(
-        child: Button(context),
+        child: button(context),
       ),
     );
   }

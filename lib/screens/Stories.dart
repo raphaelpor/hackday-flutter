@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-import 'components/renderStories.dart';
-import 'helpers/fetchPost.dart';
-import 'helpers/BodyData.dart';
+import '../components/renderStories.dart';
+import '../helpers/fetchPost.dart';
+import '../helpers/BodyData.dart';
 
 class Stories extends StatefulWidget {
   Stories({Key key}) : super(key: key);
@@ -15,8 +15,6 @@ class Stories extends StatefulWidget {
 
 class _StoriesState extends State<Stories> {
   Future<BodyData> post;
-
-  // Stories({Key key, this.post}) : super(key: key);
 
   @override
   void initState() {

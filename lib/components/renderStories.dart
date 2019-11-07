@@ -4,6 +4,7 @@ Widget renderStories(context, snapshot) {
   if (snapshot.hasData) {
     final data = snapshot.data;
     final title = data.title;
+    print(data.stories);
 
     return Center(
       child: Text(
