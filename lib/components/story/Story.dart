@@ -22,6 +22,8 @@ class Story extends StatelessWidget {
                 height: double.infinity,
                 width: double.infinity,
                 alignment: Alignment.center,
+                color: Color.fromRGBO(0, 0, 0, 0.2),
+                colorBlendMode: BlendMode.darken,
               ),
               flex: 1,
             ),
@@ -35,7 +37,7 @@ class Story extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 24,
-                color: Color.fromRGBO(255, 255, 255, 0.8),
+                color: Color.fromRGBO(255, 255, 255, 1),
               ),
             ),
           ),
