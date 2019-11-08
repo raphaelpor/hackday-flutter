@@ -10,29 +10,22 @@ class Story extends StatelessWidget {
     this.data = data;
   }
 
-  Widget indicators() {
-    return Padding(
-      padding: EdgeInsets.only(top: 70.0),
-      child: Align(
-        alignment: Alignment.topCenter,
-        child: Row(
-          children: <Widget>[
-            StoryProgressIndicator(true),
-            StoryProgressIndicator(false),
-            StoryProgressIndicator(false),
-          ],
-        ),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        indicators(),
+        Row(
+          children: [
+            Expanded(
+              child: Image.network(
+                this.data['media']['url'],
+                fit: BoxFit.cover,
+              ),
+              flex: 1,
+            ),
+          ],
+        ),
         Text(this.data['legend']),
-        Image.network(this.data['media']['url']),
       ],
     );
   }
