@@ -19,9 +19,20 @@ class Slides extends StatefulWidget {
 class _SlideState extends State<Slides> {
   dynamic snapshot;
 
+  // State
+  int activeIndex = 0;
+
   _SlideState(dynamic snapshot) {
     this.snapshot = snapshot;
   }
+
+  onNextPressed() {}
+
+  onPreviusPressed() {}
+
+  onLongPressStart() {}
+
+  onLongPressEnd() {}
 
   Widget build(BuildContext context) {
     if (this.snapshot.hasData) {
@@ -33,7 +44,12 @@ class _SlideState extends State<Slides> {
         children: [
           Story(data.slides[0], false),
           storyProgressIndicator(),
-          storiesNav(),
+          storiesNav(
+            onNextPressed,
+            onPreviusPressed,
+            onLongPressStart,
+            onLongPressEnd,
+          ),
         ],
       );
     }
