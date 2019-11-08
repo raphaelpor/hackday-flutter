@@ -10,9 +10,9 @@ class Story extends StatelessWidget {
         alignment: Alignment.topCenter,
         child: Row(
           children: <Widget>[
-            StoryProgressIndicator(),
-            StoryProgressIndicator(),
-            StoryProgressIndicator(),
+            StoryProgressIndicator(true),
+            StoryProgressIndicator(false),
+            StoryProgressIndicator(false),
           ],
         ),
       ),
