@@ -3,9 +3,11 @@ import 'package:hackday_stories/components/story/StoryProgressIndicator.dart';
 
 class Story extends StatelessWidget {
   bool isActive;
+  dynamic data;
 
-  Story(bool isActive) {
+  Story(data, bool isActive) {
     this.isActive = isActive;
+    this.data = data;
   }
 
   @override
