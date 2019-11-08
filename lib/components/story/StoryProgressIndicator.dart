@@ -10,13 +10,13 @@ renderProgressBar(int amount, int activeIndex) {
   return progressBarArray;
 }
 
-Widget storyProgressIndicator() {
+Widget storyProgressIndicator(int amount, int activeIndex) {
   return Padding(
     padding: EdgeInsets.only(top: 70.0),
     child: Align(
       alignment: Alignment.topCenter,
       child: Row(
-        children: renderProgressBar(5, 2),
+        children: renderProgressBar(amount, activeIndex),
       ),
     ),
   );

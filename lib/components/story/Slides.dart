@@ -26,13 +26,29 @@ class _SlideState extends State<Slides> {
     this.snapshot = snapshot;
   }
 
-  onNextPressed() {}
+  onNextPressed() {
+    if (activeIndex <= 5 - 1) {
+      setState(() {
+        activeIndex += 1;
+      });
+    }
+    print('onNextPressed');
+    print(activeIndex);
+  }
 
-  onPreviusPressed() {}
+  onPreviusPressed() {
+    if (activeIndex > 0) {
+      setState(() {
+        activeIndex -= 1;
+      });
+    }
+    print('onPreviusPressed');
+    print(activeIndex);
+  }
 
-  onLongPressStart() {}
+  onLongPressStart(_) {}
 
-  onLongPressEnd() {}
+  onLongPressEnd(_) {}
 
   Widget build(BuildContext context) {
     if (this.snapshot.hasData) {
@@ -43,12 +59,12 @@ class _SlideState extends State<Slides> {
       return Stack(
         children: [
           Story(data.slides[0], false),
-          storyProgressIndicator(),
+          storyProgressIndicator(5, activeIndex),
           storiesNav(
             onNextPressed,
             onPreviusPressed,
-            onLongPressStart,
-            onLongPressEnd,
+            // onLongPressStart,
+            // onLongPressEnd,
           ),
         ],
       );
