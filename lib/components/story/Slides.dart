@@ -27,7 +27,7 @@ class _SlideState extends State<Slides> {
   }
 
   onNextPressed() {
-    if (activeIndex <= this.snapshot.data.amount - 1) {
+    if (activeIndex < this.snapshot.data.amount - 1) {
       setState(() {
         activeIndex += 1;
       });
