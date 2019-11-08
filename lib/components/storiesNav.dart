@@ -6,8 +6,8 @@ import './navComponents/openContent.dart';
 Widget storiesNav(
   onNextPressed,
   onPreviusPressed,
-  // onLongPressStart,
-  // onLongPressEnd,
+  onLongPressStart,
+  onLongPressEnd,
 ) {
   return Column(
     children: <Widget>[
@@ -16,13 +16,13 @@ Widget storiesNav(
           children: <Widget>[
             gestureDetector(
               onPreviusPressed,
-              // onLongPressStart,
-              // onLongPressEnd,
+              onLongPressStart,
+              onLongPressEnd,
             ),
             gestureDetector(
               onNextPressed,
-              // onLongPressStart,
-              // onLongPressEnd,
+              onLongPressStart,
+              onLongPressEnd,
             )
           ],
         ),

@@ -46,9 +46,13 @@ class _SlideState extends State<Slides> {
     print(activeIndex);
   }
 
-  onLongPressStart(_) {}
+  onLongPressStart(_) {
+    print('onLongPressStart');
+  }
 
-  onLongPressEnd(_) {}
+  onLongPressEnd(_) {
+    print('onLongPressEnd');
+  }
 
   Widget build(BuildContext context) {
     if (this.snapshot.hasData) {
@@ -63,8 +67,8 @@ class _SlideState extends State<Slides> {
           storiesNav(
             onNextPressed,
             onPreviusPressed,
-            // onLongPressStart,
-            // onLongPressEnd,
+            onLongPressStart,
+            onLongPressEnd,
           ),
         ],
       );

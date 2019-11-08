@@ -18,10 +18,10 @@ Widget openContent() {
       navigate();
     },
     onVerticalDragStart: (_) {
-      print('onVerticalDragStart');
+      navigate();
     },
     onVerticalDragEnd: (_) {
-      print('onVerticalDragEnd');
+      navigate();
     },
     child: Container(
       height: 50,
