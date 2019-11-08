@@ -27,7 +27,7 @@ class _SlideState extends State<Slides> {
   }
 
   onNextPressed() {
-    if (activeIndex <= 5 - 1) {
+    if (activeIndex <= this.snapshot.data.amount - 1) {
       setState(() {
         activeIndex += 1;
       });
@@ -57,13 +57,11 @@ class _SlideState extends State<Slides> {
   Widget build(BuildContext context) {
     if (this.snapshot.hasData) {
       final data = snapshot.data;
-      print(data.slides);
-      print(data.amount);
 
       return Stack(
         children: [
           Story(data.slides[0], false),
-          storyProgressIndicator(5, activeIndex),
+          storyProgressIndicator(data.amount, activeIndex),
           storiesNav(
             onNextPressed,
             onPreviusPressed,
