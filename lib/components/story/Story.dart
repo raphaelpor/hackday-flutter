@@ -19,6 +19,9 @@ class Story extends StatelessWidget {
               child: Image.network(
                 this.data['media']['url'],
                 fit: BoxFit.cover,
+                height: double.infinity,
+                width: double.infinity,
+                alignment: Alignment.center,
               ),
               flex: 1,
             ),
