@@ -29,7 +29,6 @@ class StoryProgressIndicatorState extends State<StoryProgressIndicator> {
         backgroundColor: Colors.grey,
         percent: 1,
         progressColor: Colors.white,
-        // valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
       ),
     );
   }

@@ -2,6 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:hackday_stories/components/story/StoryProgressIndicator.dart';
 
 class Story extends StatelessWidget {
+  bool isActive;
+
+  Story(bool isActive) {
+    this.isActive = isActive;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
