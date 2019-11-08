@@ -1,35 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:percent_indicator/percent_indicator.dart';
+import 'package:hackday_stories/components/common/ProgressBar.dart';
 
-class StoryProgressIndicator extends StatefulWidget {
-  bool isActive;
-
-  StoryProgressIndicator(bool isActive) {
-    this.isActive = isActive;
+renderProgressBar(int amount, int activeIndex) {
+  final List<Widget> progressBarArray = [];
+  for (var i = 0; i < amount; i++) {
+    final isActive = i == activeIndex;
+    progressBarArray.add(ProgressBar(isActive));
   }
-
-  createState() {
-    return StoryProgressIndicatorState(this.isActive);
-  }
+  return progressBarArray;
 }
 
-class StoryProgressIndicatorState extends State<StoryProgressIndicator> {
-  bool isActive;
-
-  StoryProgressIndicatorState(bool isActive) {
-    this.isActive = isActive;
-  }
-
-  Widget build(BuildContext context) {
-    return Expanded(
-      child: LinearPercentIndicator(
-        animation: this.isActive,
-        animationDuration: 4000,
-        lineHeight: 3,
-        backgroundColor: Colors.grey,
-        percent: 1,
-        progressColor: Colors.white,
+Widget storyProgressIndicator() {
+  return Padding(
+    padding: EdgeInsets.only(top: 70.0),
+    child: Align(
+      alignment: Alignment.topCenter,
+      child: Row(
+        children: renderProgressBar(5, 2),
       ),
-    );
-  }
+    ),
+  );
 }

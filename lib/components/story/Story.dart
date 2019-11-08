@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hackday_stories/components/story/StoryProgressIndicator.dart';
 
 class Story extends StatelessWidget {
   bool isActive;

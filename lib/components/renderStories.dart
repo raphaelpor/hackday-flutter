@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hackday_stories/components/story/Story.dart';
+import 'package:hackday_stories/components/story/StoryProgressIndicator.dart';
 
 import 'storiesNav.dart';
 
@@ -12,6 +13,7 @@ Widget renderStories(context, snapshot) {
     return Stack(
       children: [
         Story(data.slides[0], false),
+        storyProgressIndicator(),
         storiesNav(),
       ],
     );
