@@ -27,7 +27,23 @@ class Story extends StatelessWidget {
             ),
           ],
         ),
-        Text(this.data['legend']),
+        Positioned(
+          child: Padding(
+            padding: EdgeInsets.only(left: 16, right: 16),
+            child: Text(
+              this.data['legend'],
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 24,
+                color: Color.fromRGBO(255, 255, 255, 0.8),
+              ),
+            ),
+          ),
+          left: 0,
+          top: 700,
+          bottom: 0,
+          right: 0,
+        )
       ],
     );
   }
