@@ -10,9 +10,14 @@ Widget renderStories(context, snapshot) {
     print(title);
     print(data.stories);
 
-    return Container(
-      child: Story(),
-      color: Colors.black,
+    return Stack(
+        children: [
+            Container(
+              child: Story(),
+              color: Colors.black,
+            ),
+            storiesNav(),
+        ],
     );
   }
 
