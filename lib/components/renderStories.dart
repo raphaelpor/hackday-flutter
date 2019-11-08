@@ -6,9 +6,8 @@ import 'storiesNav.dart';
 Widget renderStories(context, snapshot) {
   if (snapshot.hasData) {
     final data = snapshot.data;
-    final title = data.title;
-    print(title);
-    print(data.stories);
+    print(data.slides);
+    print(data.amount);
 
     return Stack(
         children: [

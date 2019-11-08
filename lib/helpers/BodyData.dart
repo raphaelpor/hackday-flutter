@@ -1,8 +1,8 @@
 class BodyData {
-  final String title;
-  final List<Map<String, dynamic>> stories;
+  final List<Map<String, dynamic>> slides;
+  final int amount;
 
-  BodyData({this.title, this.stories});
+  BodyData({this.slides, this.amount});
 
   factory BodyData.fromJson(Map<String, dynamic> json) {
     final items = new List<Map<String, dynamic>>.from(
@@ -13,15 +13,15 @@ class BodyData {
 
     items.forEach((item) {
       if (item['type'] == 'post-stories') {
-        data = item['externalData']['stories'];
+        data = item['externalData']['stories'][0]['slides'];
       }
     });
 
-    final storiesList = new List<Map<String, dynamic>>.from(data);
+    final slidesList = new List<Map<String, dynamic>>.from(data);
 
     return BodyData(
-      title: 'teste',
-      stories: storiesList,
+      slides: slidesList,
+      amount: slidesList.length,
     );
   }
 }
