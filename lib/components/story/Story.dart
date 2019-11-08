@@ -10,7 +10,7 @@ class Story extends StatelessWidget {
     this.data = data;
   }
 
-  Widget indicator() {
+  Widget indicators() {
     return Padding(
       padding: EdgeInsets.only(top: 70.0),
       child: Align(
@@ -30,7 +30,7 @@ class Story extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        indicator(),
+        indicators(),
         Text(this.data['legend']),
         Image.network(this.data['media']['url']),
       ],
