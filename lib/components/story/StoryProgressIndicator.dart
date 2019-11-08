@@ -12,7 +12,7 @@ renderProgressBar(int amount, int activeIndex) {
 
 Widget storyProgressIndicator(int amount, int activeIndex) {
   return Padding(
-    padding: EdgeInsets.only(top: 70.0),
+    padding: EdgeInsets.only(top: 40.0),
     child: Align(
       alignment: Alignment.topCenter,
       child: Row(
