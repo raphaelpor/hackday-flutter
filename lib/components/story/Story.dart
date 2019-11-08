@@ -10,8 +10,7 @@ class Story extends StatelessWidget {
     this.data = data;
   }
 
-  @override
-  Widget build(BuildContext context) {
+  Widget indicator() {
     return Padding(
       padding: EdgeInsets.only(top: 70.0),
       child: Align(
@@ -24,6 +23,17 @@ class Story extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        indicator(),
+        Text(this.data['legend']),
+        Image.network(this.data['media']['url']),
+      ],
     );
   }
 }
