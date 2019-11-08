@@ -8,6 +8,7 @@ Widget storiesNav(
   onPreviusPressed,
   onLongPressStart,
   onLongPressEnd,
+  String url,
 ) {
   return Column(
     children: <Widget>[
@@ -27,7 +28,7 @@ Widget storiesNav(
           ],
         ),
       ),
-      openContent(),
+      openContent(url),
     ],
   );
 }

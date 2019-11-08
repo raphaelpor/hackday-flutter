@@ -3,8 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-navigate() async {
-  const url = 'https://flutter.io';
+navigate(String url) async {
   if (await canLaunch(url)) {
     await launch(url);
   } else {
@@ -12,16 +11,16 @@ navigate() async {
   }
 }
 
-Widget openContent() {
+Widget openContent(String url) {
   return GestureDetector(
     onTap: () {
-      navigate();
+      navigate(url);
     },
     onVerticalDragStart: (_) {
-      navigate();
+      navigate(url);
     },
     onVerticalDragEnd: (_) {
-      navigate();
+      navigate(url);
     },
     child: Container(
       height: 50,

@@ -13,7 +13,7 @@ class BodyData {
 
     items.forEach((item) {
       if (item['type'] == 'post-stories') {
-        data = item['externalData']['stories'][0]['slides'];
+        data = item['externalData']['stories'][1]['slides'];
       }
     });
 

@@ -60,13 +60,14 @@ class _SlideState extends State<Slides> {
 
       return Stack(
         children: [
-          Story(data.slides[0], false),
+          Story(data.slides[activeIndex], false),
           storyProgressIndicator(data.amount, activeIndex),
           storiesNav(
             onNextPressed,
             onPreviusPressed,
             onLongPressStart,
             onLongPressEnd,
+            data.slides[activeIndex]['url'],
           ),
         ],
       );
