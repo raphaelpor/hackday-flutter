@@ -36,7 +36,9 @@ class Story extends StatelessWidget {
               this.data['legend'],
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: 24,
+                fontFamily: 'OpenSans',
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
                 color: Color.fromRGBO(255, 255, 255, 1),
               ),
             ),

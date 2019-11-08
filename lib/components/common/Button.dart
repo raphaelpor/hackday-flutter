@@ -6,6 +6,7 @@ Widget button(BuildContext context) {
       'Open Stories',
       style: TextStyle(
         fontSize: 20,
+        fontFamily: 'OpenSans',
       ),
     ),
     onPressed: () => Navigator.pushNamed(context, '/stories'),
