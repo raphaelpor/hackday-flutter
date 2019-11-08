@@ -2,9 +2,17 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-import '../components/renderStories.dart';
+import '../components/story/Slides.dart';
 import '../helpers/fetchPost.dart';
 import '../helpers/BodyData.dart';
+
+Widget slidesBuilder(context, snapshot) {
+  if (snapshot.hasData) {
+    return Slides(snapshot);
+  }
+
+  return CircularProgressIndicator();
+}
 
 class Stories extends StatefulWidget {
   Stories({Key key}) : super(key: key);
@@ -33,7 +41,7 @@ class _StoriesState extends State<Stories> {
         body: Center(
           child: FutureBuilder<BodyData>(
             future: post,
-            builder: renderStories,
+            builder: slidesBuilder,
           ),
         ),
       ),

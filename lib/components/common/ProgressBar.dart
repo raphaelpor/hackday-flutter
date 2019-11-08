@@ -9,14 +9,14 @@ class ProgressBar extends StatefulWidget {
   }
 
   createState() {
-    return ProgressBarState(this.isActive);
+    return _ProgressBarState(this.isActive);
   }
 }
 
-class ProgressBarState extends State<ProgressBar> {
+class _ProgressBarState extends State<ProgressBar> {
   bool isActive;
 
-  ProgressBarState(bool isActive) {
+  _ProgressBarState(bool isActive) {
     this.isActive = isActive;
   }
 
